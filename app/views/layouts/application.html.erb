@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NathanielBarnes.com - <%= @title %></title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div class="container_16">
+  <div class="grid_10">
+    <span class="logo">Nathaniel Barnes</span>
+  </div>
+  <div class="grid_6">
+    <%= render 'layouts/userbar' %>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_2 hspacer"></div>
+  <div class="grid_14">
+    <span class="sublogo">Skeptic, Developer, <font color="#800517">Asshole</font></span>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_16 spacer"></div>
+  <div class="clear"></div>
+  <div class="grid_16">
+    <%= render 'layouts/navbar' %>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_16 mainpanel">
+    <div class="grid_10 alpha">
+      <%= yield %>
+    </div>
+    <div class="grid_6 omega">
+      <%= render 'layouts/sidebar' %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+</body>
+</html>
