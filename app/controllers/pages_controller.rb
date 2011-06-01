@@ -14,4 +14,8 @@ class PagesController < ApplicationController
   def resume
     @title = "Resume for Nathaniel Barnes"
   end
+  
+  def copyright
+    @title = "Copyright Stuff"
+  end
 end

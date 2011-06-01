@@ -8,23 +8,19 @@
 </head>
 <body>
 <div class="container_16">
-  <div class="grid_10">
-    <span class="logo">Nathaniel Barnes</span>
+  <div class="grid_9">
+    <%= link_to "Nathaniel Barnes", root_path, :class => "logo"%>
   </div>
-  <div class="grid_6">
-    <%= render 'layouts/userbar' %>
+  <div class="grid_7">
+    <%= render 'layouts/navbar' %>
   </div>
   <div class="clear"></div>
   <div class="grid_2 hspacer"></div>
   <div class="grid_14">
-    <span class="sublogo">Skeptic, Developer, <font color="#800517">Asshole</font></span>
+    <span class="sublogo">Skeptic, Developer, <span class="firebrick">Asshole</span></span>
   </div>
   <div class="clear"></div>
   <div class="grid_16 spacer"></div>
-  <div class="clear"></div>
-  <div class="grid_16">
-    <%= render 'layouts/navbar' %>
-  </div>
   <div class="clear"></div>
   <div class="grid_16 mainpanel">
     <div class="grid_10 alpha">
@@ -33,6 +29,11 @@
     <div class="grid_6 omega">
       <%= render 'layouts/sidebar' %>
     </div>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_2 hspacer"></div>
+  <div class="grid_14">
+    <%= render 'layouts/footer' %>
   </div>
   <div class="clear"></div>
 </div>

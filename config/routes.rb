@@ -6,6 +6,7 @@ Nathanielbarnes::Application.routes.draw do
   match "/about", :to => "pages#about"
   match "/contact", :to => "pages#contact"
   match "/resume", :to => "pages#resume"
+  match "/copyright", :to => "pages#copyright"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

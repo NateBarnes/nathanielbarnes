@@ -1,1 +1,26 @@
-<%= gravatar_image_tag "kerianambrai@gmail.com" %><p>Sidebar</p>
+<div class="sidebar">
+  <span class="title">About Me:</span><%= gravatar_image_tag "kerianambrai@gmail.com", :class => "inline_image" %><br />
+  I've been a developer working in the United States Intelligence Community nearly a decade. I was a slave to Java development and Oracle DBA work until I finally was freed to do joyous Ruby/Rails development. In addition to working on some OSS, I spend my free time gaming, debunking random crap, and spending time with my wife.<br /><br />
+  <span class="title">Social Networks</span>
+  <ul>
+    <li><%= link_to "GitHub", "http://github.com/NateBarnes" %></li>
+    <li><%= link_to "Twitter", "http://twitter.com/NathanielBarnes" %></li>
+    <li><%= link_to "Facebook", "http://www.facebook.com/nathaniel.r.barnes" %></li>
+  </ul>
+  <br /><br />
+  <span class="title">Tags</span>
+  <ul>
+    <li>Example Tag 1</li>
+    <li>Example Tag 2</li>
+  </ul>
+  <br /><br />
+  <span class="title">Archive</span>
+  <ul>
+    <li>Example Entry 1</li>
+    <li>Example Entry 2</li>
+  </ul>
+  <br /><br />
+  <center>
+    <%= image_tag "rss_feed_green.png", :alt => "RSS Feed" %>
+  </center>
+</div>
