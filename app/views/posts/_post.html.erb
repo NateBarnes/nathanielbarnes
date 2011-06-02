@@ -1,0 +1,6 @@
+<div class="post_block">
+  <span class="post_title"><%= raw(diff_last_word_class(post.title, "black", "firebrick")) %></span>
+  <br /><br />
+  <p class="post_content"><%= raw(post.content) %></p>
+  <span class="post_footer">Posted <%= time_ago_in_words(post.created_at) %> ago</span>
+</div>

@@ -1,6 +1,12 @@
 body {
   background-image: url("../images/brushedmetal.jpg"); }
 
+.round_corners {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px; }
+
 .logo {
   font-family: times, Times New Roman, times-roman, georgia, serif;
   color: #444;
@@ -26,7 +32,7 @@ body {
   font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
   letter-spacing: 0.1em;
   line-height: 145%;
-  font-size: 11pt;
+  font-size: 10pt;
   font-variant: small-caps;
   text-transform: lowercase; }
   .sidebar :first-letter {
@@ -57,7 +63,7 @@ div.hspacer {
   color: #800517; }
 
 .black {
-  color: #444; }
+  color: #222; }
 
 .footer_grey {
   color: #999; }
@@ -78,3 +84,28 @@ ul.navbar {
     font-weight: bold; }
     ul.navbar li a {
       text-decoration: none; }
+
+div.post_block {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  div.post_block .post_title {
+    font: bold 34px "Century Schoolbook", Georgia, Times, serif;
+    color: #333;
+    line-height: 90%;
+    margin: .2em 0 .4em 0;
+    letter-spacing: -2px; }
+  div.post_block .post_content {
+    color: #222;
+    font-size: 12px;
+    margin: 5px;
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    line-height: 20px; }
+  div.post_block .post_footer {
+    margin-left: 400px;
+    font-size: 85%;
+    letter-spacing: 1px;
+    color: #888;
+    font-size: 10px;
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    font-weight: 100; }

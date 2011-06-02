@@ -1,7 +1,8 @@
 Nathanielbarnes::Application.routes.draw do
   resources :pages
+  resources :posts
   
-  root :to => "pages#home"
+  root :to => "posts#index"
   
   match "/about", :to => "pages#about"
   match "/contact", :to => "pages#contact"
