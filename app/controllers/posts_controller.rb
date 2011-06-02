@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def new
     @title = "New Post"
+    @post = Post.new
   end
 
   def edit
@@ -18,7 +19,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+    @post = Post.new(params[:post].merge(:user_id => 1))
+    if @post.save
+      flash[:success] = "Post Successfuly Saved"
+      redirect_to @post
+    else
+      @title = "New Post"
+      render "new"
+    end
   end
 
   def destroy

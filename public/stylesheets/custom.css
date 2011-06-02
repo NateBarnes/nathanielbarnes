@@ -65,6 +65,9 @@ div.hspacer {
 .black {
   color: #222; }
 
+.no_underline {
+  text-decoration: none; }
+
 .footer_grey {
   color: #999; }
 
@@ -102,7 +105,7 @@ div.post_block {
     font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     line-height: 20px; }
   div.post_block .post_footer {
-    margin-left: 400px;
+    margin-left: 375px;
     font-size: 85%;
     letter-spacing: 1px;
     color: #888;
