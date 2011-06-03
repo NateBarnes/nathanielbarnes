@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/brushedmetal.jpg"); }
+  background-color: #DADADA; }
 
 .round_corners {
   -moz-border-radius: 15px;
@@ -51,7 +51,7 @@ body {
 
 .mainpanel {
   background-color: #EEE;
-  opacity: .70; }
+  opacity: .85; }
 
 div.spacer {
   height: 5em; }
