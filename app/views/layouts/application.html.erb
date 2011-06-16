@@ -24,7 +24,9 @@
   <div class="clear"></div>
   <div class="grid_16 mainpanel round_corners">
     <div class="grid_10 alpha">
-      <%= yield %>
+      <div class="post_block">
+        <%= yield %>
+      </div>
     </div>
     <div class="grid_6 omega">
       <%= render 'layouts/sidebar' %>
