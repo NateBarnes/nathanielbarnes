@@ -27,7 +27,14 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post].merge(:user_id => 1))
     @tags = params[:tags][:tags].split(", ")
     if @post.save
-      @tags.each { |n| @post.tags.create!(:name => n) }
+      @tags.each do |n|
+        if Tag.find_by_name(n).nil?
+          @post.tags.create!(:name => n) unless Tag.find_by_name(n)
+        else
+          t = Tag.find_by_name(n)
+          TagTrack.create!(:post_id => @post.id, :tag_id => t.id)
+        end
+      end
       flash[:success] = "Post Successfuly Saved"
       redirect_to @post
     else
