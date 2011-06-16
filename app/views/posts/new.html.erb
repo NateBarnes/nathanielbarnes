@@ -7,6 +7,11 @@
     <div class="field">
       <%= f.text_area :content %>
     </div>
+    <%= fields_for :tags do |t| %>
+      <div class="field">
+        <%= t.text_field :tags %>
+      </div>
+    <% end %>
     <div class="actions">
       <%= f.submit "Submit" %>
     </div>

@@ -9,18 +9,16 @@
   </ul>
   <br /><br />
   <span class="title">Tags</span>
-  <ul>
-    <li>Example Tag 1</li>
-    <li>Example Tag 2</li>
-  </ul>
+  <ul><%= render all_tags %></ul>
   <br /><br />
   <span class="title">Archive</span>
   <ul>
-    <li>Example Entry 1</li>
-    <li>Example Entry 2</li>
+    <% archives.each do |month, posts| %>
+      <li><%= link_to(month.strftime('%B')+" (#{posts.size})", "/posts/#{month.year}/#{month.month}") %></li>
+    <% end %>
   </ul>
   <br /><br />
   <center>
-    <%= image_tag "rss_feed_green.png", :alt => "RSS Feed" %>
+    <%= link_to(image_tag("rss_feed_green.png", :alt => "RSS Feed"), posts_path(:rss)) %>
   </center>
 </div>

@@ -3,6 +3,11 @@ class PostsController < ApplicationController
     @title = "Posts"
     @posts = Post.all
   end
+  
+  def archive
+    @posts = Post.from_month(Time.parse "#{params[:month]}/#{params[:year]}").paginate(:page => params[:page], :per_page => 5)
+    render :action => 'index'
+  end
 
   def show
     @post = Post.find_by_id(params[:id])
@@ -20,7 +25,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post].merge(:user_id => 1))
+    @tags = params[:tags][:tags].split(", ")
     if @post.save
+      @tags.each { |n| @post.tags.create!(:name => n) }
       flash[:success] = "Post Successfuly Saved"
       redirect_to @post
     else

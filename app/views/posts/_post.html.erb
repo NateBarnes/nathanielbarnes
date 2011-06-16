@@ -2,5 +2,6 @@
   <span class="post_title"><%= link_to(raw(diff_last_word_class(post.title, "black", "firebrick")), post_path(post.id), :class => "no_underline") %></span>
   <br /><br />
   <p class="post_content"><%= raw(post.content) %></p>
-  <span class="post_footer">Posted <%= time_ago_in_words(post.created_at) %> ago</span>
+  <span class="post_footer">Posted <%= time_ago_in_words(post.created_at) %> ago</span><br />
+  <span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br />
 </div>

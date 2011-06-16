@@ -105,10 +105,20 @@ div.post_block {
     font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     line-height: 20px; }
   div.post_block .post_footer {
-    margin-left: 375px;
     font-size: 85%;
     letter-spacing: 1px;
     color: #888;
     font-size: 10px;
     font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     font-weight: 100; }
+    div.post_block .post_footer ul {
+      list-style: none;
+      display: block;
+      margin: 0px;
+      padding: 0px; }
+      div.post_block .post_footer ul li {
+        float: left;
+        margin-left: 0px;
+        margin-right: 10px; }
+        div.post_block .post_footer ul li a {
+          text-decoration: none; }

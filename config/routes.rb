@@ -1,8 +1,13 @@
 Nathanielbarnes::Application.routes.draw do
+  devise_for :users
+
   resources :pages
   resources :posts
+  resources :tags
   
   root :to => "posts#index"
+  
+  match "/posts/:year/:month", :controller => "posts", :action => "archive"
   
   match "/about", :to => "pages#about"
   match "/contact", :to => "pages#contact"
