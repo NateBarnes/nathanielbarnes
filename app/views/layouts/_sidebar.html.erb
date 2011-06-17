@@ -14,7 +14,7 @@
   <span class="title">Archive</span>
   <ul>
     <% archives.each do |month, posts| %>
-      <li><%= link_to(month.strftime('%B')+" (#{posts.size})", "/posts/#{month.year}/#{month.month}", :class => "no_underline") %></li>
+      <li><%= link_to(month.strftime('%B')+" #{month.year} (#{posts.size})", "/posts/#{month.year}/#{month.month}", :class => "no_underline") %></li>
     <% end %>
   </ul>
   <br /><br />
