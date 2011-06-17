@@ -93,6 +93,10 @@ div.hspacer {
   float: right;
 }
 
+.right {
+  float: right;
+}
+
 ul.navbar {
   list-style: none;
   display: block;
@@ -130,6 +134,21 @@ div.post_block {
     margin: 5px;
     font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     line-height: 20px;
+  }
+  .comments {
+    background-color: #DDD;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+    
+    .field {
+      margin-bottom: 10px;
+    }
+    .post_content {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #888;
+    }
   }
   .post_footer {
     font-size: 85%;

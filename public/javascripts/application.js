@@ -1,2 +1,7 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function show_comments(e) {
+  if (e.style.display != "block") {
+    e.style.display = "block";
+  } else {
+    e.style.display = "none";
+  }
+}

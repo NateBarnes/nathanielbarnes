@@ -74,6 +74,9 @@ div.hspacer {
 .inline_image {
   float: right; }
 
+.right {
+  float: right; }
+
 ul.navbar {
   list-style: none;
   display: block; }
@@ -104,6 +107,17 @@ div.post_block {
     margin: 5px;
     font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
     line-height: 20px; }
+  div.post_block .comments {
+    background-color: #DDD;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none; }
+    div.post_block .comments .field {
+      margin-bottom: 10px; }
+    div.post_block .comments .post_content {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #888; }
   div.post_block .post_footer {
     font-size: 85%;
     letter-spacing: 1px;

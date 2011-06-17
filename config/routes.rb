@@ -2,7 +2,9 @@ Nathanielbarnes::Application.routes.draw do
   devise_for :users
 
   resources :pages
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   resources :tags
   
   root :to => "posts#index"

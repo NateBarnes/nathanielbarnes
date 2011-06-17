@@ -1,5 +1,19 @@
 <span class="post_title"><%= link_to(raw(diff_last_word_class(post.title, "black", "firebrick")), post_path(post.id), :class => "no_underline") %></span>
 <br /><br />
 <p class="post_content"><%= raw(post.content) %></p>
-<span class="post_footer">Posted <%= time_ago_in_words(post.created_at) %> ago</span><br />
-<span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br /><br />
+<span class="post_footer right">Posted <%= time_ago_in_words(post.created_at) %> ago</span>
+<span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br />
+<span class="post_footer"><%= link_to "Comments (#{ post.comments.count })", "javascript:show_comments(comments_#{post.id})" %></span><br />
+<div class="comments round_corners" id="comments_<%= post.id %>">
+  <% unless post.comments.nil? %>
+    <% post.comments.each do |c| %>
+      <span class="sublogo"><%= c.name %></span><span class="post_footer right"><%= time_ago_in_words(c.created_at) %></span><br />
+      <div class="post_content"><%= c.content %></div><br /><br />
+    <% end %>
+  <% end %>
+  <%= form_for [post, post.comments.new] do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <%= render 'comment_fields', :f => f, :object => f.object %>
+  <% end %>
+</div>
+<br />
