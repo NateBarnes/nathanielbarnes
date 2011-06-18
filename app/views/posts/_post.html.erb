@@ -3,11 +3,12 @@
 <p class="post_content"><%= raw(post.content) %></p>
 <span class="post_footer right">Posted <%= time_ago_in_words(post.created_at) %> ago</span>
 <span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br />
-<span class="post_footer"><%= link_to "Comments (#{ post.comments.count })", "javascript:show_comments(comments_#{post.id})", :class => "no_underline" %></span><br />
+<span class="post_footer"><%= link_to "Comments (#{ post.comments.count })", "javascript:show_comments('comments_#{post.id}')", :class => "no_underline" %></span>
+<%= link_to( "Delete", "/posts/#{post.id}", :class => "no_underline right", :method => :delete, :confirm => "Are you sure?" ) if user_signed_in? %><br />
 <div class="comments round_corners" id="comments_<%= post.id %>">
   <% unless post.comments.nil? %>
     <% post.comments.each do |c| %>
-      <span class="sublogo"><%= c.name %></span><span class="post_footer right"><%= time_ago_in_words(c.created_at) %></span><br />
+      <span class="sublogo"><%= c.name %></span><span class="post_footer right"><%= time_ago_in_words(c.created_at) %></span>&nbsp;<%= link_to( "Delete", "/posts/#{post.id}/comments/#{c.id}", :class => "post_footer no_underline right", :method => :delete, :confirm => "Are you sure?" ) if user_signed_in? %><br />
       <div class="post_content"><%= c.content %></div><br /><br />
     <% end %>
   <% end %>

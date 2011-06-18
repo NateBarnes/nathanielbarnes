@@ -118,6 +118,10 @@ div.post_block {
     div.post_block .comments .post_content {
       padding-bottom: 5px;
       border-bottom: 1px solid #999; }
+    div.post_block .comments .comment_area {
+      width: 535px; }
+    div.post_block .comments span.post_footer {
+      margin-left: 10px; }
   div.post_block .post_footer {
     font-size: 85%;
     letter-spacing: 1px;

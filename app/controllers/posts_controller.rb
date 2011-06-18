@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :create, :destroy]
+  
   def index
     @title = "Posts"
     @posts = Post.all
@@ -44,6 +46,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    Post.find_by_id(params[:id]).destroy
+    redirect_to root_path
   end
 
 end

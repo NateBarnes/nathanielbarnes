@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:create, :destroy]
+  
   def create
     post = Post.find_by_id(params[:post_id])
     post.comments.create!( params[:comment] )
@@ -6,6 +8,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    Comment.find_by_id(params[:id]).destroy
+    redirect_to root_path
   end
 
 end
