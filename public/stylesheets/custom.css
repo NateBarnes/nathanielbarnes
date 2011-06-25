@@ -77,6 +77,11 @@ div.hspacer {
 .right {
   float: right; }
 
+.social-stuff {
+  margin-top: 10px; }
+  .social-stuff iframe {
+    float: right; }
+
 ul.navbar {
   list-style: none;
   display: block; }
