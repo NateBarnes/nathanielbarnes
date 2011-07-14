@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :destroy]
+  before_filter :authenticate_user!, :only => :destroy
   
   def create
     post = Post.find_by_id(params[:post_id])
