@@ -8,3 +8,4 @@ doc/
 .DS_Store
 webrat.log
 .sass-cache
+Gemfile.lock
