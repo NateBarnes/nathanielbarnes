@@ -18,7 +18,7 @@
   <% end %>
   <%= form_for [post, post.comments.new] do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
-    <%= render 'comment_fields', :f => f, :object => f.object %>
+    <%= render 'posts/comment_fields', :f => f, :object => f.object %>
   <% end %>
 </div>
 <br />
