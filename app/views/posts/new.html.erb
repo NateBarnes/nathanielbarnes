@@ -1,17 +1,7 @@
 <div class="post_block">
   <%= form_for @post do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
-    <div class="field">
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <%= f.text_area :content %>
-    </div>
-    <%= fields_for :tags do |t| %>
-      <div class="field">
-        <%= t.text_field :tags %>
-      </div>
-    <% end %>
+    <%= render 'post_fields', :f => f %>
     <div class="actions">
       <%= f.submit "Submit" %>
     </div>

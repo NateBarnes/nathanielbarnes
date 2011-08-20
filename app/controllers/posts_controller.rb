@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find_by_id(params[:id])
     @title = "Edit Post"
   end
 
@@ -42,6 +43,17 @@ class PostsController < ApplicationController
     else
       @title = "New Post"
       render "new"
+    end
+  end
+  
+  def update
+    @post = Post.find_by_id(params[:id])
+    if @post.update_attributes(params[:post])
+      flash[:success] = "Profile updated"
+      redirect_to @post
+    else
+      @title = "Edit post"
+      render 'edit'
     end
   end
 

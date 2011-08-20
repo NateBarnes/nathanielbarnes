@@ -1,0 +1,11 @@
+<div class="field">
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.text_area :content %>
+</div>
+<%= fields_for :tags do |t| %>
+  <div class="field">
+    <%= t.text_field :tags %>
+  </div>
+<% end %>
