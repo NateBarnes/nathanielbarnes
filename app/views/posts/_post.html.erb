@@ -13,7 +13,7 @@
   <% unless post.comments.nil? %>
     <% post.comments.each do |c| %>
       <span class="sublogo"><%= c.name %></span><span class="post_footer right"><%= time_ago_in_words(c.created_at) %></span>&nbsp;<%= link_to( "Delete", "/posts/#{post.id}/comments/#{c.id}", :class => "post_footer no_underline right", :method => :delete, :confirm => "Are you sure?" ) if user_signed_in? %><br />
-      <div class="post_content"><%= simple_format( c.content ) %></div><br /><br />
+      <div class="post_content"><%= simple_format( c.content ) %></div>
     <% end %>
   <% end %>
   <%= form_for [post, post.comments.new] do |f| %>
