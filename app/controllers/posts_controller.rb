@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   
   def index
     @title = "Posts"
-    @posts = Post.all
+    @posts = user_signed_in? ? Post.all : Post.published
   end
   
   def archive

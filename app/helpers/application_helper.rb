@@ -4,6 +4,6 @@ module ApplicationHelper
   end
   
   def archives
-    @archives = Post.all.group_by { |t| t.created_at.beginning_of_month}
+    @archives = Post.published.group_by { |t| t.published_at.beginning_of_month}
   end
 end

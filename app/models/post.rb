@@ -4,6 +4,10 @@ class Post < ActiveRecord::Base
   has_many :tags, :through => :tag_tracks
   has_many :comments, :dependent => :destroy
   
-  default_scope :order => "posts.created_at DESC"
-  named_scope :from_month, lambda { |month| {:conditions => {:created_at => month..(month + 1.month)}} }
+  default_scope :order => "posts.published_at DESC"
+  named_scope :from_month, lambda { |month| {:conditions => {:published_at => month..(month + 1.month)}} }
+  
+  def self.published
+    self.find(:all, :conditions => [ "published_at < ?", DateTime.now ])
+  end
 end

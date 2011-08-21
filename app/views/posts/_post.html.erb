@@ -1,7 +1,7 @@
 <span class="post_title"><%= link_to(raw(diff_last_word_class(post.title, "black", "firebrick")), post_path(post.id), :class => "no_underline") %></span>
 <br /><br />
 <%= raw(simple_format(post.content, :class => 'post_content')) %>
-<span class="post_footer right">Posted <%= time_ago_in_words(post.created_at) %> ago</span>
+<span class="post_footer right">Posted <%= time_ago_in_words(post.published_at) %> ago</span>
 <span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br />
 <div class="social-stuff">
 <a href="http://twitter.com/share" class="twitter-share-button right" data-count="horizontal" data-via="NathanielBarnes" data-text="<%= post.title %>" data-url="http://www.nathanielbarnes.com/posts/<%= post.id %>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

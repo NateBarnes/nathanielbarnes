@@ -1,1 +1,3 @@
-<li><%= link_to("#{tag.name} (#{tag.posts.count})", tag_path(tag.id), :class => "no_underline") %></li>
+<% unless tag.published_posts.empty? %>
+  <li><%= link_to("#{tag.name} (#{tag.published_posts.count})", tag_path(tag.id), :class => "no_underline") %></li>
+<% end %>

@@ -4,6 +4,9 @@
 <div class="field">
   <%= f.text_area :content %>
 </div>
+<div class="field">
+  <%= f.text_field :published_at, :value => Time.now %>
+</div>
 <%= fields_for :tags do |t| %>
   <div class="field">
     <%= t.text_field :tags %>
