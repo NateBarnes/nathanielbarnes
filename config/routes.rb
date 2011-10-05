@@ -6,6 +6,7 @@ Nathanielbarnes::Application.routes.draw do
     resources :comments
   end
   resources :tags
+  resources :ahnconf2011
   
   root :to => "posts#index"
   
