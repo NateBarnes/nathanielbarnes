@@ -1,6 +1,6 @@
 <span class="post_title"><%= link_to(raw(diff_last_word_class(post.title, "black", "firebrick")), post_path(post.id), :class => "no_underline") %></span>
 <br /><br />
-<%= raw(simple_format(post.content, :class => 'post_content')) %>
+<%= raw(simple_format(post.content, { :class => 'post_content' }, { :sanitize => false })) %>
 <span class="post_footer right">Posted <%= time_ago_in_words(post.published_at) %> ago</span>
 <span class="post_footer"><ul><li>Tags: </li><%= render post.tags %></ul></span><br />
 <div class="social-stuff">
