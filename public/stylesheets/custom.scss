@@ -105,6 +105,16 @@ div.hspacer {
   }
 }
 
+div.resume {
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      padding-left: 0;
+    }
+  }
+}
+
 ul.navbar {
   list-style: none;
   display: block;

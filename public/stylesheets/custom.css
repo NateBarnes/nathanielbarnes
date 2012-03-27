@@ -82,6 +82,12 @@ div.hspacer {
   .social-stuff iframe {
     float: right; }
 
+div.resume ul {
+  margin-left: 0;
+  padding-left: 0; }
+  div.resume ul li {
+    padding-left: 0; }
+
 ul.navbar {
   list-style: none;
   display: block; }
