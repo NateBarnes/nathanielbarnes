@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   
   def index
     @title = "Posts"
-    @posts = user_signed_in? ? Post.all : Post.published
+    @posts = user_signed_in? ? Post.all.paginate(:page => params[:page], :per_page => 5) : Post.published.paginate(:page => params[:page], :per_page => 5)
   end
   
   def archive

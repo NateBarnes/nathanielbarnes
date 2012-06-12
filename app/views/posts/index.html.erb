@@ -1,5 +1,6 @@
 <% unless @posts.empty? %>
   <%= render @posts %>
+  <%= will_paginate @posts %>
 <% else %>
   <div class="post_block">
     <span class="post_title"><%=raw(diff_last_word_class("No posts for this time", "black", "firebrick"))%></span>
