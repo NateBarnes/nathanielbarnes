@@ -1,0 +1,11 @@
+<div class="scroll">
+  <ul>
+    <% @posts.each do |post| %>
+      <li class="arrow">
+        <%= link_to post.title, post %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= will_paginate @posts, :page_links => false, :style => "align: center;", :previous_label => "Previous", :next_label => "Next" %>
+</div>

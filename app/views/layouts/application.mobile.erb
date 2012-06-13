@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= @title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta charset="UTF-8">
+    <%= stylesheet_link_tag "jqtouch.css", "apple.css", "mobile.css" %>
+    <%= javascript_include_tag "jqtouch-jquery.min.js", "jqtouch.min.js", "mobile" %>
+  </head>
+  <body>
+    <div id="jqt" class="supports3d portrait">
+      <div id="home" class="current">
+        <div class="toolbar">
+          <%= link_to "Back", root_path, :class => "back" unless current_page? root_path %>
+          <h1><%= @title  %></h1>
+          <%= link_to "Full Site", root_url(:mobile => 0), :class => "button", :rel => "external" %>
+        </div>
+        
+        <% unless flash.empty? %>
+          <div class="info">
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+          </div>
+        <% end %>
+      
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

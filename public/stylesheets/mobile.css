@@ -1,0 +1,52 @@
+div.pagination {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+  padding: 0;
+  margin: 15px 10px 17px 10px;
+  -webkit-margin-collapse: separate;
+  border: 0;
+  background: none;
+  clear: both;
+  overflow: hidden;
+  color: gray;
+  text-shadow: white 0 1px 0;
+  font: bold 18px "Helvetica Neue", Helvetica;
+}
+
+div.pagination .previous_page {
+  font-size: 14px;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 48%;
+  float: left;
+  display: box;
+  padding: 11px 10px 14px 10px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  border: 1px solid #52657F;
+  background-color: white;
+}
+
+div.pagination .next_page {
+  font-size: 14px;
+  text-align: center;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 48%;
+  float: right;
+  display: box;
+  padding: 11px 10px 14px 10px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
+  border: 1px solid #52657F;
+  background-color: white;
+}
