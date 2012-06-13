@@ -16,7 +16,7 @@
         <div class="toolbar">
           <%= link_to "Back", root_path, :class => "back" unless current_page? root_path %>
           <h1><%= @title  %></h1>
-          <%= link_to "Full Site", root_url(:mobile => 0), :class => "button", :rel => "external" %>
+          <%= link_to "About", about_path, :class => "button", :rel => "external" %>
         </div>
         
         <% unless flash.empty? %>

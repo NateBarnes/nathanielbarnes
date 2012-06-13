@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :edit, :create, :destroy]
   
   def index
-    @title = "Posts"
+    @title = "NathanielBarnes.com"
     @posts = user_signed_in? ? Post.all.paginate(:page => params[:page], :per_page => 5) : Post.published.paginate(:page => params[:page], :per_page => 5)
   end
   
