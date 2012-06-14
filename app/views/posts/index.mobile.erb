@@ -1,7 +1,7 @@
 <div class="scroll">
   <ul>
     <% @posts.each do |post| %>
-      <li class="arrow">
+      <li class="arrow" href="<%=post_path(post)%>">
         <%= link_to post.title, post %>
       </li>
     <% end %>

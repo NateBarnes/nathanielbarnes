@@ -1,3 +1,8 @@
+html {
+    /*If you had a black or close to black background*/
+    background-color: #CBD2D8;
+}
+
 div.pagination {
   display: block;
   -webkit-margin-before: 1em;
